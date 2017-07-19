@@ -4,8 +4,6 @@ import './App.css'
 import {Switch, Route} from 'react-router-dom'
 
 import Nav from './components/Nav/Nav'
-import Shop from './components/Shop/Shop'
-import Product from './components/Product/Product'
 
 class App extends Component {
   render() {
@@ -15,7 +13,7 @@ class App extends Component {
          <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/shop" component={Shop} />
-            <Route path="/shop/:productId" component={Product} />
+            <Route path="/shop/:productId" component={Shop} />
             <Route path="/cart" component={Cart} />
          </Switch>
       </div>
@@ -32,6 +30,11 @@ function Home () {
    )
 }
 
+function Shop () {
+   return (
+      <h1>Shop</h1>
+   )
+}
 function Cart () {
    return (
       <h1>Cart</h1>
